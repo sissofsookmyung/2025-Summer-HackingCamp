@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/403.css') }}">
+<div class="error-box">
+   <b>STAFF ONLY</b><br>
+  이 페이지는 스탭 전용입니다.
+</div>
+{% endblock %}
+

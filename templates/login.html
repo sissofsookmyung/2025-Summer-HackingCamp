@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="user-container">
+  <h2>로그인</h2>
+  {% if error %}<div class="msg">{{ error }}</div>{% endif %}
+  <form method="POST">
+    <input name="username" type="text" placeholder="아이디" autocomplete="off">
+    <input name="password" type="password" placeholder="비밀번호" autocomplete="off">
+    <button type="submit">로그인</button>
+  </form>
+  <p>아직 계정이 없으신가요? <a href="{{ url_for('register') }}">회원가입</a></p>
+</div>
+{% endblock %}
+

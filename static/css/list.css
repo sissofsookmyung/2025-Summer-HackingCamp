@@ -1,0 +1,142 @@
+.staffpage-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+.staffpage-container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #1f2d3d;
+}
+
+
+.staff-notice {
+  background: #f9fbff;
+  border-left: 4px solid #3498db;
+  padding: 16px 20px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+.staff-notice h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+.staff-notice li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+
+.custom-output {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #a94442;
+}
+
+
+.mini-box.big {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 20px;
+}
+.mini-box.big h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+
+.mini-stage {
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+
+.mini-seat-grid.big {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 4px;
+  justify-items: center;
+  margin-bottom: 6px;
+}
+.staff-seat {
+  width: 45px;
+  height: 40px;
+  background: #9b59b6;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #7d3c98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.staff-seat .status {
+  font-size: 10px;
+  color: #dff0d8;
+  margin-top: 2px;
+}
+
+
+.seat-note {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+  margin-bottom: 18px;
+}
+
+
+.general-zone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.general-block {
+  width: 90%;
+  height: 160px;
+  background: #e0e0e0;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+.all-available-msg {
+  padding: 10px;
+  background: #f9fbff;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50;
+}
+

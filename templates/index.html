@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+<div class="header">
+  <h3><span class="highlight">Home 영역</span>의 좌석배치도입니다</h3>
+  <p>좌석을 선택해주세요</p>
+  <small>앞줄 일부 좌석은 운영 스탭 전용</small>
+</div>
+
+<form method="POST" action="/buy" id="buy-form">
+  <div>
+    <input type="text" name="optional" placeholder="optional"  >
+  </div>
+  <br><br>
+    {% if not logged_in %}
+    <div class="msg">로그인 먼저 해주세요</div>
+  {% endif %}
+  {% if msg %}
+    <div class="msg">{{ msg }}</div>
+  {% endif %}
+
+  <div class="stage">무대방향(STAGE)</div>
+
+  <div class="seat-wrapper">
+    <div class="seat-map">
+{% for r in range(30) %}
+  <div class="row">
+    <span class="row-label">r{{r+1}}</span>
+    {% for c in range(60) %}
+      {% set code = "r" ~ (r+1) ~ "_c" ~ (c+1) %}
+      <!--관객 예매는 R3열부터 시작됩니다 -->
+      <label class="seat
+        {% if r < 2 %} staff-only{% endif %}   {# 앞 두 줄은 staff-only #} 
+        {% if code in reserved %} reserved{% endif %}
+        {% if selected == code %} selected{% endif %}" 
+        data-code="{{code}}">
+        <input type="radio" name="seat_code" value="{{ code }}"
+               {% if r < 2 %}disabled{% elif code in reserved %}disabled{% endif %}>
+        <span title ="{{code}}"></span>
+      </label>
+    {% endfor %}
+  </div>
+{% endfor %}
+
+
+    </div>
+    <button type="submit" {% if not logged_in %}disabled{% endif %}>
+      좌석 선택완료
+    </button>
+  </div>
+</form>
+{% endblock %}
+
